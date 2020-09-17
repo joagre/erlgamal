@@ -1,4 +1,3 @@
-# Erlang
 ERLC:=$(shell which erlc)
 ERLC_FLAGS:=-Werror -I ../.. +debug_info -Ddebug
 ERL_HEADERS:=$(wildcard *.hrl) $(wildcard ../../*/include/*.hrl)
@@ -14,4 +13,4 @@ clean:
 	rm -f $(ALL_OBJECTS) *.core
 
 %.beam: %.erl
-	env SCOTTI_LIB=$(SCOTTI_LIB) $(ERLC) $(ERLC_FLAGS) $<
+	env $(ERLC) $(ERLC_FLAGS) $<
