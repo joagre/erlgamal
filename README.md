@@ -1,9 +1,9 @@
-Quick start
------------
+# Quick start
 
-Pre-requisists: GNU's Multiple Precision Arithmetic Library (GMP)
+Pre-requisists: *Install GNU's Multiple Precision Arithmetic Library (GMP)*
 
-$ git clone jhjhjh
+```
+$ git clone git@github.com:joagre/erlgamal.git
 ...
 $ make
 ...
@@ -24,38 +24,44 @@ Randomized ciphertext size: 5416
 Randomized ciphertext size: 5928
 ok
 2> 
+```
 
-Files
------
+# Files
 
+```
 ./lib/elgamal/src/elgamal.erl
 ./lib/elgamal/src/elgamal.hrl
+```
 
-  The multiplicative and additive ElGamal encryption library. More
-  info is availble in elgamal.erl and elgamal.hrl.
+The multiplicative and additive ElGamal encryption library. More
+info is availble in elgamal.erl and elgamal.hrl.
 
+```
 ./lib/elgamal/test/unit_test_elgamal.erl
+```
 
-  Test suite which tests the elgamal module. More info is availble in
-  unit_test_suite.erl.
+Test suite which tests the elgamal module. More info is availble in
+unit_test_suite.erl.
 
+```
 ./lib/sstdlib/src/mpz.erl
 ./lib/sstdlib/src/gmp_nif.erl
 ./lib/sstdlib/c_src/gmp_nif.c
 ./lib/sstdlib/c_src/dloglib.c
+```
 
-  The mpz module makes a number of functions available from the GMP:
+The mpz module makes a number of functions available from GMP:
 
-    generate_safe_prime
-    mpz_gcd
-    mpz_invert
-    mpz_lcm
-    mpz_powm
-    mpz_pow_ui
-    mpz_probab_prime_p
+* generate_safe_prime
+* mpz_gcd
+* mpz_invert
+* mpz_lcm
+* mpz_powm
+* mpz_pow_ui
+* mpz_probab_prime_p
  
-  Additionally a dlog function is made available to perform fast
-  calculation of the discrete logarithm using Pollard’s rho-method as
-  described in https://www.luke.maurits.id.au/files/misc/honours_thesis.pdf
+Additionally a dlog function is made available to perform fast
+calculation of the discrete logarithm using Pollard’s rho-method as
+described in https://www.luke.maurits.id.au/files/misc/honours_thesis.pdf
 
-  Note: To debug the dlog stuff use the standalone lib/sstdlib/c_src/dlog.c
+Note: To debug the dlog stuff use the standalone lib/sstdlib/c_src/dlog.c
