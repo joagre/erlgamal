@@ -1,0 +1,32 @@
+Här är en liten sammanfattning av vad jag fattar vad det gäller safe P och Q
+
+- p = 2q + 1 är ett "safe" prime om P och Q är primtal.
+- Zp är en cyklisk group som bara cykliska subgrupper. I fallet "safe" så är det 4 subgrupper
+
+de "triviala" är {1} och {1,P-1} dvs av längd 1 och 2
+sedan alla element Zp = P = {1...P-1}
+samt en grupp av storlek Q
+Lagrange sats säger ju att det ska finnas en subgrupp av storlek S for varje delare
+till P-1.
+I fallet t.ex 59 = 2*29 + 1 så blir alltså delarna till 59-1 (= 2*29)  1, 2, 29, 58
+Dvs för alla Zp där p är safe så har Zp 4 subgrupper. Det är ju cool. :-)
+
+Man vet ju att vad man än väljer för element i intervallet (2,...P-2)
+så kommer man hitta ett element som ligger i gruppen P eller Q (enl ovan). Q är ju
+halva storleken av P och är väl det bästa man kan göra. Väljer man något annat P
+så kommer delarna av P-1 vara fler och grupp storlekarna mindre, förutom Zp
+själv förstås.
+
+Enl ett papper så är det också viktigt att det är Q som bestämmer säkerheten inte P
+Q ska vara primtal och stort. Så vill man ha 1024 bit säkerhet är det Q som ska vara
+1024 bit (P 2048).
+
+"Measuring small subgroup attacks against Diffie-Hellman"
+( https://jhalderm.com/pub/papers/subgroup-ndss16.pdf )
+
+Varför man väljer att använda P i vissa papper och Q i andra övergår mitt
+förstånd.
+
+...
+
+/Tony
